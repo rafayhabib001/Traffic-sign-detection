@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Sign Detection</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='preview.js') }}" defer></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🚦 Traffic Sign Detection System</h1>
+    <p>Upload an image and our AI model will detect traffic signs.</p>
+
+    <!-- Upload Form -->
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" 
+               name="image" 
+               accept="image/*" 
+               required 
+               onchange="previewImage(event)">
+
+        <br>
+
+        <button type="submit">🔍 Detect Sign</button>
+
+    </form>
+
+    <!-- Image Preview -->
+    <div>
+        <img id="preview" style="display:none;">
+    </div>
+
+    <!-- Detection Result -->
+    {% if result_image %}
+        <h3>Detection Result</h3>
+        <img src="{{ result_image }}">
+    {% endif %}
+
+</div>
+
+<footer>
+    <p>🚗 AI Traffic Sign Detection | Made by Abdul Rafay & Abdullah</p>
+</footer>
+
+</body>
+</html>
