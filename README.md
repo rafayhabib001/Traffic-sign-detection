@@ -26,7 +26,7 @@ Users can upload an image, and the system will automatically detect and highligh
 
 - **Backend:** Python  
 - **Frontend:** HTML, CSS  
-- **Model:** YOLOv8 (Ultralytics)  
+- **Model:** YOLOv12m (Ultralytics)  
 - **Environment:** Google Colab (for training)  
 
 ---
